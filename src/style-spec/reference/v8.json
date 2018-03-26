@@ -166,7 +166,7 @@
       "type": "enum",
       "values": {
         "raster": {
-            "doc": "A raster tile source."
+          "doc": "A raster tile source."
         }
       },
       "doc": "The type of the source."
@@ -231,7 +231,7 @@
       "type": "enum",
       "values": {
         "raster-dem": {
-            "doc": "A RGB-encoded raster DEM source"
+          "doc": "A RGB-encoded raster DEM source"
         }
       },
       "doc": "The type of the source."
@@ -590,10 +590,10 @@
       "type": "enum",
       "values": {
         "visible": {
-            "doc": "The layer is shown."
+          "doc": "The layer is shown."
         },
         "none": {
-            "doc": "The layer is not shown."
+          "doc": "The layer is not shown."
         }
       },
       "default": "visible",
@@ -613,10 +613,10 @@
       "type": "enum",
       "values": {
         "visible": {
-            "doc": "The layer is shown."
+          "doc": "The layer is shown."
         },
         "none": {
-            "doc": "The layer is not shown."
+          "doc": "The layer is not shown."
         }
       },
       "default": "visible",
@@ -636,10 +636,10 @@
       "type": "enum",
       "values": {
         "visible": {
-            "doc": "The layer is shown."
+          "doc": "The layer is shown."
         },
         "none": {
-            "doc": "The layer is not shown."
+          "doc": "The layer is not shown."
         }
       },
       "default": "visible",
@@ -659,10 +659,10 @@
       "type": "enum",
       "values": {
         "visible": {
-            "doc": "The layer is shown."
+          "doc": "The layer is shown."
         },
         "none": {
-            "doc": "The layer is not shown."
+          "doc": "The layer is not shown."
         }
       },
       "default": "visible",
@@ -679,10 +679,10 @@
       "type": "enum",
       "values": {
         "visible": {
-            "doc": "The layer is shown."
+          "doc": "The layer is shown."
         },
         "none": {
-            "doc": "The layer is not shown."
+          "doc": "The layer is not shown."
         }
       },
       "default": "visible",
@@ -704,13 +704,13 @@
       "zoom-function": true,
       "values": {
         "butt": {
-            "doc": "A cap with a squared-off end which is drawn to the exact endpoint of the line."
+          "doc": "A cap with a squared-off end which is drawn to the exact endpoint of the line."
         },
         "round": {
-            "doc": "A cap with a rounded end which is drawn beyond the endpoint of the line at a radius of one-half of the line's width and centered on the endpoint of the line."
+          "doc": "A cap with a rounded end which is drawn beyond the endpoint of the line at a radius of one-half of the line's width and centered on the endpoint of the line."
         },
         "square": {
-            "doc": "A cap with a squared-off end which is drawn beyond the endpoint of the line at a distance of one-half of the line's width."
+          "doc": "A cap with a squared-off end which is drawn beyond the endpoint of the line at a distance of one-half of the line's width."
         }
       },
       "default": "butt",
@@ -732,13 +732,13 @@
       "property-function": true,
       "values": {
         "bevel": {
-            "doc": "A join with a squared-off end which is drawn beyond the endpoint of the line at a distance of one-half of the line's width."
+          "doc": "A join with a squared-off end which is drawn beyond the endpoint of the line at a distance of one-half of the line's width."
         },
         "round": {
-            "doc": "A join with a rounded end which is drawn beyond the endpoint of the line at a radius of one-half of the line's width and centered on the endpoint of the line."
+          "doc": "A join with a rounded end which is drawn beyond the endpoint of the line at a radius of one-half of the line's width and centered on the endpoint of the line."
         },
         "miter": {
-            "doc": "A join with a sharp, angled corner which is drawn with the outer sides beyond the endpoint of the path until they meet."
+          "doc": "A join with a sharp, angled corner which is drawn with the outer sides beyond the endpoint of the path until they meet."
         }
       },
       "default": "miter",
@@ -804,10 +804,10 @@
       "type": "enum",
       "values": {
         "visible": {
-            "doc": "The layer is shown."
+          "doc": "The layer is shown."
         },
         "none": {
-            "doc": "The layer is not shown."
+          "doc": "The layer is not shown."
         }
       },
       "default": "visible",
@@ -829,12 +829,12 @@
       "function": "piecewise-constant",
       "zoom-function": true,
       "values": {
-          "point": {
-              "doc": "The label is placed at the point where the geometry is located."
-          },
-          "line": {
-              "doc": "The label is placed along the line of the geometry. Can only be used on `LineString` and `Polygon` geometries."
-          }
+        "point": {
+          "doc": "The label is placed at the point where the geometry is located."
+        },
+        "line": {
+          "doc": "The label is placed along the line of the geometry. Can only be used on `LineString` and `Polygon` geometries."
+        }
       },
       "default": "point",
       "doc": "Label placement relative to its geometry.",
@@ -951,13 +951,13 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "When `symbol-placement` is set to `point`, aligns icons east-west. When `symbol-placement` is set to `line`, aligns icon x-axes with the line."
+          "doc": "When `symbol-placement` is set to `point`, aligns icons east-west. When `symbol-placement` is set to `line`, aligns icon x-axes with the line."
         },
         "viewport": {
-            "doc": "Produces icons whose x-axes are aligned with the x-axis of the viewport, regardless of the value of `symbol-placement`."
+          "doc": "Produces icons whose x-axes are aligned with the x-axis of the viewport, regardless of the value of `symbol-placement`."
         },
         "auto": {
-            "doc": "When `symbol-placement` is set to `point`, this is equivalent to `viewport`. When `symbol-placement` is set to `line`, this is equivalent to `map`."
+          "doc": "When `symbol-placement` is set to `point`, this is equivalent to `viewport`. When `symbol-placement` is set to `line`, this is equivalent to `map`."
         }
       },
       "default": "auto",
@@ -1014,16 +1014,16 @@
       "zoom-function": true,
       "values": {
         "none": {
-            "doc": "The icon is displayed at its intrinsic aspect ratio."
+          "doc": "The icon is displayed at its intrinsic aspect ratio."
         },
         "width": {
-            "doc": "The icon is scaled in the x-dimension to fit the width of the text."
+          "doc": "The icon is scaled in the x-dimension to fit the width of the text."
         },
         "height": {
-            "doc": "The icon is scaled in the y-dimension to fit the height of the text."
+          "doc": "The icon is scaled in the y-dimension to fit the height of the text."
         },
         "both": {
-            "doc": "The icon is scaled in both x- and y-dimensions."
+          "doc": "The icon is scaled in both x- and y-dimensions."
         }
       },
       "default": "none",
@@ -1209,31 +1209,31 @@
       "property-function": true,
       "values": {
         "center": {
-            "doc": "The center of the icon is placed closest to the anchor."
+          "doc": "The center of the icon is placed closest to the anchor."
         },
         "left": {
-            "doc": "The left side of the icon is placed closest to the anchor."
+          "doc": "The left side of the icon is placed closest to the anchor."
         },
         "right": {
-            "doc": "The right side of the icon is placed closest to the anchor."
+          "doc": "The right side of the icon is placed closest to the anchor."
         },
         "top": {
-            "doc": "The top of the icon is placed closest to the anchor."
+          "doc": "The top of the icon is placed closest to the anchor."
         },
         "bottom": {
-            "doc": "The bottom of the icon is placed closest to the anchor."
+          "doc": "The bottom of the icon is placed closest to the anchor."
         },
         "top-left": {
-            "doc": "The top left corner of the icon is placed closest to the anchor."
+          "doc": "The top left corner of the icon is placed closest to the anchor."
         },
         "top-right": {
-            "doc": "The top right corner of the icon is placed closest to the anchor."
+          "doc": "The top right corner of the icon is placed closest to the anchor."
         },
         "bottom-left": {
-            "doc": "The bottom left corner of the icon is placed closest to the anchor."
+          "doc": "The bottom left corner of the icon is placed closest to the anchor."
         },
         "bottom-right": {
-            "doc": "The bottom right corner of the icon is placed closest to the anchor."
+          "doc": "The bottom right corner of the icon is placed closest to the anchor."
         }
       },
       "default": "center",
@@ -1262,13 +1262,13 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "The icon is aligned to the plane of the map."
+          "doc": "The icon is aligned to the plane of the map."
         },
         "viewport": {
-            "doc": "The icon is aligned to the plane of the viewport."
+          "doc": "The icon is aligned to the plane of the viewport."
         },
         "auto": {
-            "doc": "Automatically matches the value of `icon-rotation-alignment`."
+          "doc": "Automatically matches the value of `icon-rotation-alignment`."
         }
       },
       "default": "auto",
@@ -1292,13 +1292,13 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "The text is aligned to the plane of the map."
+          "doc": "The text is aligned to the plane of the map."
         },
         "viewport": {
-            "doc": "The text is aligned to the plane of the viewport."
+          "doc": "The text is aligned to the plane of the viewport."
         },
         "auto": {
-            "doc": "Automatically matches the value of `text-rotation-alignment`."
+          "doc": "Automatically matches the value of `text-rotation-alignment`."
         }
       },
       "default": "auto",
@@ -1328,13 +1328,13 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "When `symbol-placement` is set to `point`, aligns text east-west. When `symbol-placement` is set to `line`, aligns text x-axes with the line."
+          "doc": "When `symbol-placement` is set to `point`, aligns text east-west. When `symbol-placement` is set to `line`, aligns text x-axes with the line."
         },
         "viewport": {
-            "doc": "Produces glyphs whose x-axes are aligned with the x-axis of the viewport, regardless of the value of `symbol-placement`."
+          "doc": "Produces glyphs whose x-axes are aligned with the x-axis of the viewport, regardless of the value of `symbol-placement`."
         },
         "auto": {
-            "doc": "When `symbol-placement` is set to `point`, this is equivalent to `viewport`. When `symbol-placement` is set to `line`, this is equivalent to `map`."
+          "doc": "When `symbol-placement` is set to `point`, this is equivalent to `viewport`. When `symbol-placement` is set to `line`, this is equivalent to `map`."
         }
       },
       "default": "auto",
@@ -1511,13 +1511,13 @@
       "property-function": true,
       "values": {
         "left": {
-            "doc": "The text is aligned to the left."
+          "doc": "The text is aligned to the left."
         },
         "center": {
-            "doc": "The text is centered."
+          "doc": "The text is centered."
         },
         "right": {
-            "doc": "The text is aligned to the right."
+          "doc": "The text is aligned to the right."
         }
       },
       "default": "center",
@@ -1547,31 +1547,31 @@
       "property-function": true,
       "values": {
         "center": {
-            "doc": "The center of the text is placed closest to the anchor."
+          "doc": "The center of the text is placed closest to the anchor."
         },
         "left": {
-            "doc": "The left side of the text is placed closest to the anchor."
+          "doc": "The left side of the text is placed closest to the anchor."
         },
         "right": {
-            "doc": "The right side of the text is placed closest to the anchor."
+          "doc": "The right side of the text is placed closest to the anchor."
         },
         "top": {
-            "doc": "The top of the text is placed closest to the anchor."
+          "doc": "The top of the text is placed closest to the anchor."
         },
         "bottom": {
-            "doc": "The bottom of the text is placed closest to the anchor."
+          "doc": "The bottom of the text is placed closest to the anchor."
         },
         "top-left": {
-            "doc": "The top left corner of the text is placed closest to the anchor."
+          "doc": "The top left corner of the text is placed closest to the anchor."
         },
         "top-right": {
-            "doc": "The top right corner of the text is placed closest to the anchor."
+          "doc": "The top right corner of the text is placed closest to the anchor."
         },
         "bottom-left": {
-            "doc": "The bottom left corner of the text is placed closest to the anchor."
+          "doc": "The bottom left corner of the text is placed closest to the anchor."
         },
         "bottom-right": {
-            "doc": "The bottom right corner of the text is placed closest to the anchor."
+          "doc": "The bottom right corner of the text is placed closest to the anchor."
         }
       },
       "default": "center",
@@ -1697,13 +1697,13 @@
       "property-function": true,
       "values": {
         "none": {
-            "doc": "The text is not altered."
+          "doc": "The text is not altered."
         },
         "uppercase": {
-            "doc": "Forces all letters to be displayed in uppercase."
+          "doc": "Forces all letters to be displayed in uppercase."
         },
         "lowercase": {
-            "doc": "Forces all letters to be displayed in lowercase."
+          "doc": "Forces all letters to be displayed in lowercase."
         }
       },
       "default": "none",
@@ -1819,10 +1819,10 @@
       "type": "enum",
       "values": {
         "visible": {
-            "doc": "The layer is shown."
+          "doc": "The layer is shown."
         },
         "none": {
-            "doc": "The layer is not shown."
+          "doc": "The layer is not shown."
         }
       },
       "default": "visible",
@@ -1843,10 +1843,10 @@
       "type": "enum",
       "values": {
         "visible": {
-            "doc": "The layer is shown."
+          "doc": "The layer is shown."
         },
         "none": {
-            "doc": "The layer is not shown."
+          "doc": "The layer is not shown."
         }
       },
       "default": "visible",
@@ -1867,10 +1867,10 @@
       "type": "enum",
       "values": {
         "visible": {
-            "doc": "The layer is shown."
+          "doc": "The layer is shown."
         },
         "none": {
-            "doc": "The layer is not shown."
+          "doc": "The layer is not shown."
         }
       },
       "default": "visible",
@@ -1892,43 +1892,43 @@
     "type": "enum",
     "values": {
       "==": {
-          "doc": "`[\"==\", key, value]` equality: `feature[key] = value`"
+        "doc": "`[\"==\", key, value]` equality: `feature[key] = value`"
       },
       "!=": {
-          "doc": "`[\"!=\", key, value]` inequality: `feature[key] ≠ value`"
+        "doc": "`[\"!=\", key, value]` inequality: `feature[key] ≠ value`"
       },
       ">": {
-          "doc": "`[\">\", key, value]` greater than: `feature[key] > value`"
+        "doc": "`[\">\", key, value]` greater than: `feature[key] > value`"
       },
       ">=": {
-          "doc": "`[\">=\", key, value]` greater than or equal: `feature[key] ≥ value`"
+        "doc": "`[\">=\", key, value]` greater than or equal: `feature[key] ≥ value`"
       },
       "<": {
-          "doc": "`[\"<\", key, value]` less than: `feature[key] < value`"
+        "doc": "`[\"<\", key, value]` less than: `feature[key] < value`"
       },
       "<=": {
-          "doc": "`[\"<=\", key, value]` less than or equal: `feature[key] ≤ value`"
+        "doc": "`[\"<=\", key, value]` less than or equal: `feature[key] ≤ value`"
       },
       "in": {
-          "doc": "`[\"in\", key, v0, ..., vn]` set inclusion: `feature[key] ∈ {v0, ..., vn}`"
+        "doc": "`[\"in\", key, v0, ..., vn]` set inclusion: `feature[key] ∈ {v0, ..., vn}`"
       },
       "!in": {
-          "doc": "`[\"!in\", key, v0, ..., vn]` set exclusion: `feature[key] ∉ {v0, ..., vn}`"
+        "doc": "`[\"!in\", key, v0, ..., vn]` set exclusion: `feature[key] ∉ {v0, ..., vn}`"
       },
       "all": {
-          "doc": "`[\"all\", f0, ..., fn]` logical `AND`: `f0 ∧ ... ∧ fn`"
+        "doc": "`[\"all\", f0, ..., fn]` logical `AND`: `f0 ∧ ... ∧ fn`"
       },
       "any": {
-          "doc": "`[\"any\", f0, ..., fn]` logical `OR`: `f0 ∨ ... ∨ fn`"
+        "doc": "`[\"any\", f0, ..., fn]` logical `OR`: `f0 ∨ ... ∨ fn`"
       },
       "none": {
-          "doc": "`[\"none\", f0, ..., fn]` logical `NOR`: `¬f0 ∧ ... ∧ ¬fn`"
+        "doc": "`[\"none\", f0, ..., fn]` logical `NOR`: `¬f0 ∧ ... ∧ ¬fn`"
       },
       "has": {
-          "doc": "`[\"has\", key]` `feature[key]` exists"
+        "doc": "`[\"has\", key]` `feature[key]` exists"
       },
       "!has": {
-          "doc": "`[\"!has\", key]` `feature[key]` does not exist"
+        "doc": "`[\"!has\", key]` `feature[key]` does not exist"
       }
     },
     "doc": "The filter operator."
@@ -1937,13 +1937,13 @@
     "type": "enum",
     "values": {
       "Point": {
-          "doc": "Filter to point geometries."
+        "doc": "Filter to point geometries."
       },
       "LineString": {
-          "doc": "Filter to line geometries."
+        "doc": "Filter to line geometries."
       },
       "Polygon": {
-          "doc": "Filter to polygon geometries."
+        "doc": "Filter to polygon geometries."
       }
     },
     "doc": "The geometry type for the filter to select."
@@ -1972,18 +1972,18 @@
     "type": {
       "type": "enum",
       "values": {
-          "identity": {
-              "doc": "Return the input value as the output value."
-          },
-          "exponential": {
-              "doc": "Generate an output by interpolating between stops just less than and just greater than the function input."
-          },
-          "interval": {
-              "doc": "Return the output value of the stop just less than the function input."
-          },
-          "categorical": {
-              "doc": "Return the output value of the stop equal to the function input."
-          }
+        "identity": {
+          "doc": "Return the input value as the output value."
+        },
+        "exponential": {
+          "doc": "Generate an output by interpolating between stops just less than and just greater than the function input."
+        },
+        "interval": {
+          "doc": "Return the output value of the stop just less than the function input."
+        },
+        "categorical": {
+          "doc": "Return the output value of the stop equal to the function input."
+        }
       },
       "doc": "The interpolation strategy to use in function evaluation.",
       "default": "exponential"
@@ -1991,15 +1991,15 @@
     "colorSpace": {
       "type": "enum",
       "values": {
-          "rgb": {
-              "doc": "Use the RGB color space to interpolate color values"
-          },
-          "lab": {
-              "doc": "Use the LAB color space to interpolate color values."
-          },
-          "hcl": {
-              "doc": "Use the HCL color space to interpolate color values, interpolating the Hue, Chroma, and Luminance channels individually."
-          }
+        "rgb": {
+          "doc": "Use the RGB color space to interpolate color values"
+        },
+        "lab": {
+          "doc": "Use the LAB color space to interpolate color values."
+        },
+        "hcl": {
+          "doc": "Use the HCL color space to interpolate color values, interpolating the Hue, Chroma, and Luminance channels individually."
+        }
       },
       "doc": "The color space in which colors interpolated. Interpolating colors in perceptual color spaces like LAB and HCL tend to produce color ramps that look more consistent and produce colors that can be differentiated more easily than those interpolated in RGB space.",
       "default": "rgb"
@@ -2076,7 +2076,7 @@
           }
         }
       },
-        "case": {
+      "case": {
         "doc": "Selects the first output whose corresponding test condition evaluates to true.",
         "group": "Decision",
         "sdk-support": {
@@ -2824,10 +2824,10 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "The fill is translated relative to the map."
+          "doc": "The fill is translated relative to the map."
         },
         "viewport": {
-            "doc": "The fill is translated relative to the viewport."
+          "doc": "The fill is translated relative to the viewport."
         }
       },
       "doc": "Controls the frame of reference for `fill-translate`.",
@@ -2939,10 +2939,10 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "The fill extrusion is translated relative to the map."
+          "doc": "The fill extrusion is translated relative to the map."
         },
         "viewport": {
-            "doc": "The fill extrusion is translated relative to the viewport."
+          "doc": "The fill extrusion is translated relative to the viewport."
         }
       },
       "doc": "Controls the frame of reference for `fill-extrusion-translate`.",
@@ -3113,10 +3113,10 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "The line is translated relative to the map."
+          "doc": "The line is translated relative to the map."
         },
         "viewport": {
-            "doc": "The line is translated relative to the viewport."
+          "doc": "The line is translated relative to the viewport."
         }
       },
       "doc": "Controls the frame of reference for `line-translate`.",
@@ -3394,10 +3394,10 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "The circle is translated relative to the map."
+          "doc": "The circle is translated relative to the map."
         },
         "viewport": {
-            "doc": "The circle is translated relative to the viewport."
+          "doc": "The circle is translated relative to the viewport."
         }
       },
       "doc": "Controls the frame of reference for `circle-translate`.",
@@ -3421,10 +3421,10 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "Circles are scaled according to their apparent distance to the camera."
+          "doc": "Circles are scaled according to their apparent distance to the camera."
         },
         "viewport": {
-            "doc": "Circles are not scaled."
+          "doc": "Circles are not scaled."
         }
       },
       "default": "map",
@@ -3445,10 +3445,10 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "The circle is aligned to the plane of the map."
+          "doc": "The circle is aligned to the plane of the map."
         },
         "viewport": {
-            "doc": "The circle is aligned to the plane of the viewport."
+          "doc": "The circle is aligned to the plane of the viewport."
         }
       },
       "default": "viewport",
@@ -3803,10 +3803,10 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "Icons are translated relative to the map."
+          "doc": "Icons are translated relative to the map."
         },
         "viewport": {
-            "doc": "Icons are translated relative to the viewport."
+          "doc": "Icons are translated relative to the viewport."
         }
       },
       "doc": "Controls the frame of reference for `icon-translate`.",
@@ -3993,10 +3993,10 @@
       "zoom-function": true,
       "values": {
         "map": {
-            "doc": "The text is translated relative to the map."
+          "doc": "The text is translated relative to the map."
         },
         "viewport": {
-            "doc": "The text is translated relative to the viewport."
+          "doc": "The text is translated relative to the viewport."
         }
       },
       "doc": "Controls the frame of reference for `text-translate`.",
@@ -4051,6 +4051,21 @@
           "android": "2.0.1",
           "ios": "2.0.0",
           "macos": "0.1.0"
+        },
+        "data-driven styling": {}
+      }
+    },
+    "raster-color": {
+      "type": "color",
+      "default": "#000000",
+      "doc": "The color of the raster applied to RGB average value.",
+      "function": "interpolated",
+      "zoom-function": true,
+      "property-function": true,
+      "transition": true,
+      "sdk-support": {
+        "basic functionality": {
+          "js": "0.45.0"
         },
         "data-driven styling": {}
       }
@@ -4152,101 +4167,101 @@
     }
   },
   "paint_hillshade": {
-      "hillshade-illumination-direction": {
-        "type": "number",
-        "default": 335,
-        "minimum": 0,
-        "maximum": 359,
-        "doc": "The direction of the light source used to generate the hillshading with 0 as the top of the viewport if `hillshade-illumination-anchor` is set to `viewport` and due north if `hillshade-illumination-anchor` is set to `map`.",
-        "function": "interpolated",
-        "zoom-function": true,
-        "transition": false,
-        "sdk-support": {
-          "basic functionality": {
-            "js": "0.43.0"
-          },
-          "data-driven styling": {}
-        }
-      },
-      "hillshade-illumination-anchor": {
-        "type": "enum",
-        "function": "piecewise-constant",
-        "zoom-function": true,
-        "values": {
-          "map": {
-              "doc": "The hillshade illumination is relative to the north direction."
-          },
-          "viewport": {
-              "doc": "The hillshade illumination is relative to the top of the viewport."
-          }
+    "hillshade-illumination-direction": {
+      "type": "number",
+      "default": 335,
+      "minimum": 0,
+      "maximum": 359,
+      "doc": "The direction of the light source used to generate the hillshading with 0 as the top of the viewport if `hillshade-illumination-anchor` is set to `viewport` and due north if `hillshade-illumination-anchor` is set to `map`.",
+      "function": "interpolated",
+      "zoom-function": true,
+      "transition": false,
+      "sdk-support": {
+        "basic functionality": {
+          "js": "0.43.0"
         },
-        "default": "viewport",
-        "doc": "Direction of light source when map is rotated.",
-        "sdk-support": {
-          "basic functionality": {
-            "js": "0.43.0"
-          },
-          "data-driven styling": {}
-        }
-      },
-      "hillshade-exaggeration": {
-        "type": "number",
-        "doc": "Intensity of the hillshade",
-        "default": 0.5,
-        "minimum": 0,
-        "maximum": 1,
-        "function": "interpolated",
-        "zoom-function": true,
-        "transition": true,
-        "sdk-support": {
-          "basic functionality": {
-            "js": "0.43.0"
-          },
-          "data-driven styling": {}
-        }
-      },
-      "hillshade-shadow-color": {
-        "type": "color",
-        "default": "#000000",
-        "doc": "The shading color of areas that face away from the light source.",
-        "function": "interpolated",
-        "zoom-function": true,
-        "transition": true,
-        "sdk-support": {
-          "basic functionality": {
-            "js": "0.43.0"
-          },
-          "data-driven styling": {}
-        }
-      },
-      "hillshade-highlight-color": {
-        "type": "color",
-        "default": "#FFFFFF",
-        "doc": "The shading color of areas that faces towards the light source.",
-        "function": "interpolated",
-        "zoom-function": true,
-        "transition": true,
-        "sdk-support": {
-          "basic functionality": {
-            "js": "0.43.0"
-          },
-          "data-driven styling": {}
-        }
-      },
-      "hillshade-accent-color": {
-        "type": "color",
-        "default": "#000000",
-        "doc": "The shading color used to accentuate rugged terrain like sharp cliffs and gorges.",
-        "function": "interpolated",
-        "zoom-function": true,
-        "transition": true,
-        "sdk-support": {
-          "basic functionality": {
-            "js": "0.43.0"
-          },
-          "data-driven styling": {}
-        }
+        "data-driven styling": {}
       }
+    },
+    "hillshade-illumination-anchor": {
+      "type": "enum",
+      "function": "piecewise-constant",
+      "zoom-function": true,
+      "values": {
+        "map": {
+          "doc": "The hillshade illumination is relative to the north direction."
+        },
+        "viewport": {
+          "doc": "The hillshade illumination is relative to the top of the viewport."
+        }
+      },
+      "default": "viewport",
+      "doc": "Direction of light source when map is rotated.",
+      "sdk-support": {
+        "basic functionality": {
+          "js": "0.43.0"
+        },
+        "data-driven styling": {}
+      }
+    },
+    "hillshade-exaggeration": {
+      "type": "number",
+      "doc": "Intensity of the hillshade",
+      "default": 0.5,
+      "minimum": 0,
+      "maximum": 1,
+      "function": "interpolated",
+      "zoom-function": true,
+      "transition": true,
+      "sdk-support": {
+        "basic functionality": {
+          "js": "0.43.0"
+        },
+        "data-driven styling": {}
+      }
+    },
+    "hillshade-shadow-color": {
+      "type": "color",
+      "default": "#000000",
+      "doc": "The shading color of areas that face away from the light source.",
+      "function": "interpolated",
+      "zoom-function": true,
+      "transition": true,
+      "sdk-support": {
+        "basic functionality": {
+          "js": "0.43.0"
+        },
+        "data-driven styling": {}
+      }
+    },
+    "hillshade-highlight-color": {
+      "type": "color",
+      "default": "#FFFFFF",
+      "doc": "The shading color of areas that faces towards the light source.",
+      "function": "interpolated",
+      "zoom-function": true,
+      "transition": true,
+      "sdk-support": {
+        "basic functionality": {
+          "js": "0.43.0"
+        },
+        "data-driven styling": {}
+      }
+    },
+    "hillshade-accent-color": {
+      "type": "color",
+      "default": "#000000",
+      "doc": "The shading color used to accentuate rugged terrain like sharp cliffs and gorges.",
+      "function": "interpolated",
+      "zoom-function": true,
+      "transition": true,
+      "sdk-support": {
+        "basic functionality": {
+          "js": "0.43.0"
+        },
+        "data-driven styling": {}
+      }
+    }
   },
   "paint_background": {
     "background-color": {

@@ -350,6 +350,7 @@ declare type RasterLayerSpecification = {|
     "paint"?: {|
         "raster-opacity"?: PropertyValueSpecification<number>,
         "raster-hue-rotate"?: PropertyValueSpecification<number>,
+        "raster-color"?: PropertyValueSpecification<ColorSpecification>,
         "raster-brightness-min"?: PropertyValueSpecification<number>,
         "raster-brightness-max"?: PropertyValueSpecification<number>,
         "raster-saturation"?: PropertyValueSpecification<number>,
@@ -406,4 +407,3 @@ declare type LayerSpecification =
     | RasterLayerSpecification
     | HillshadeLayerSpecification
     | BackgroundLayerSpecification;
-

@@ -102,6 +102,7 @@ class RasterTileSource extends Evented implements Source {
 
                 const context = this.map.painter.context;
                 const gl = context.gl;
+
                 tile.texture = this.map.painter.getTileTexture(img.width);
                 if (tile.texture) {
                     tile.texture.bind(gl.LINEAR, gl.CLAMP_TO_EDGE, gl.LINEAR_MIPMAP_NEAREST);

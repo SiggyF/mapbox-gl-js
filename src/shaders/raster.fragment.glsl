@@ -5,6 +5,8 @@ uniform sampler2D u_image1;
 varying vec2 v_pos0;
 varying vec2 v_pos1;
 
+uniform sampler2D u_lut;
+
 uniform float u_brightness_low;
 uniform float u_brightness_high;
 
