@@ -34,10 +34,11 @@ var videoStyle = {
         "video": {
             "type": "raster",
             "tiles": [
-                "http://localhost:8080/result/{z}/{y}/{x}.webm"
+                "http://localhost:8080/result/{z}/{x}/{y}.webm"
             ],
             tileSize: 512,
-            getImage: getVideo
+            getImage: getVideo,
+            scheme: 'xyz'
         }
     },
     "layers": [{
@@ -59,6 +60,7 @@ let videos = []
 mapElement.addEventListener('video-added', function(e) {
     let video = e.detail.video
     videos.push(video)
+    // add timersrc here...
     video.addEventListener('playing', () => {
         map.triggerRepaint();
     });
