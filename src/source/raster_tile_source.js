@@ -39,6 +39,11 @@ class RasterTileSource extends Evented implements Source {
     map: Map;
     tiles: Array<string>;
 
+    // overridable function to  generate the  source  of the raster
+    getImage: ?Function;
+    // use Mipmaps?
+    useMipmap; boolean;
+
     _loaded: boolean;
     _options: RasterSourceSpecification | RasterDEMSourceSpecification;
     _tileJSONRequest: ?Cancelable;
@@ -56,9 +61,12 @@ class RasterTileSource extends Evented implements Source {
         this.scheme = 'xyz';
         this.tileSize = 512;
         this._loaded = false;
+        // allow to use  custom  implementations of getImage, for  tiled-video or tiled-canvas
+        this.getImage = getImage;
+        this.useMipmap = false;
 
         this._options = extend({ type: 'raster' }, options);
-        extend(this, pick(options, ['url', 'scheme', 'tileSize']));
+        extend(this, pick(options, ['url', 'scheme', 'tileSize', 'getImage']));
     }
 
     load() {
@@ -105,7 +113,7 @@ class RasterTileSource extends Evented implements Source {
 
     loadTile(tile: Tile, callback: Callback<void>) {
         const url = this.map._requestManager.normalizeTileURL(tile.tileID.canonical.url(this.tiles, this.scheme), this.url, this.tileSize);
-        tile.request = getImage(this.map._requestManager.transformRequest(url, ResourceType.Tile), (err, img) => {
+        tile.request = this.getImage(this.map._requestManager.transformRequest(url, ResourceType.Tile), (err, img) => {
             delete tile.request;
 
             if (tile.aborted) {
@@ -123,10 +131,17 @@ class RasterTileSource extends Evented implements Source {
                 const gl = context.gl;
                 tile.texture = this.map.painter.getTileTexture(img.width);
                 if (tile.texture) {
-                    tile.texture.update(img, { useMipmap: true });
+                    tile.texture.update(img, { useMipmap: this.useMipmap });
                 } else {
-                    tile.texture = new Texture(context, img, gl.RGBA, { useMipmap: true });
-                    tile.texture.bind(gl.LINEAR, gl.CLAMP_TO_EDGE, gl.LINEAR_MIPMAP_NEAREST);
+                    tile.texture = new Texture(context, img, gl.RGBA, { useMipmap: this.useMipmap });
+                    if (this.useMipmap) {
+                        tile.texture.bind(gl.LINEAR, gl.CLAMP_TO_EDGE, gl.LINEAR_MIPMAP_NEAREST);
+                    } else {
+                        tile.texture.bind(gl.LINEAR, gl.CLAMP_TO_EDGE);
+                        this.on('repaint', () => {
+                            tile.texture.update(img, { useMipmap: this.useMipmap })
+                        })
+                    }
 
                     if (context.extTextureFilterAnisotropic) {
                         gl.texParameterf(gl.TEXTURE_2D, context.extTextureFilterAnisotropic.TEXTURE_MAX_ANISOTROPY_EXT, context.extTextureFilterAnisotropicMax);
@@ -140,6 +155,10 @@ class RasterTileSource extends Evented implements Source {
                 callback(null);
             }
         });
+    }
+
+    prepare() {
+        this.fire(new Event('repaint'))
     }
 
     abortTile(tile: Tile, callback: Callback<void>) {
@@ -156,7 +175,8 @@ class RasterTileSource extends Evented implements Source {
     }
 
     hasTransition() {
-        return false;
+        // return  true if video  is playing
+        return true;
     }
 }
 
