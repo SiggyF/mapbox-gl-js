@@ -6,14 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel='stylesheet' href='../dist/mapbox-gl.css' />
     <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.js"></script>
+    <script text="javascript" src="https://webtiming.github.io/timingsrc/lib/timingsrc-v2.js"></script>
+    <script text="javascript" src="https://mcorp.no/lib/mediasync.js"></script>
     <style>
         body { margin: 0; padding: 0; }
-        html, body, #map { height: 100%; }
+        #map, #debug { height: 100vh; width: 50vw; }
+        #container {display: flex;}
+        #debug video {max-width: 25vw;}
+
     </style>
 </head>
 
 <body>
-<div id='map'></div>
+    <div id="container">
+    <div id='map'></div>
+    <div id="debug"></div>
+    </div>
 <script src='../dist/mapbox-gl-dev.js'></script>
 <script src='access_token_generated.js'></script>
 <script src="tiled-video.js">

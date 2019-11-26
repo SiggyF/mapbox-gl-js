@@ -115,7 +115,6 @@ class RasterTileSource extends Evented implements Source {
         const url = this.map._requestManager.normalizeTileURL(tile.tileID.canonical.url(this.tiles, this.scheme), this.url, this.tileSize);
         tile.request = this.getImage(this.map._requestManager.transformRequest(url, ResourceType.Tile), (err, img) => {
             delete tile.request;
-
             if (tile.aborted) {
                 tile.state = 'unloaded';
                 callback(null);
@@ -139,8 +138,8 @@ class RasterTileSource extends Evented implements Source {
                     } else {
                         tile.texture.bind(gl.LINEAR, gl.CLAMP_TO_EDGE);
                         this.on('repaint', () => {
-                            tile.texture.update(img, { useMipmap: this.useMipmap })
-                        })
+                            tile.texture.update(img, { useMipmap: this.useMipmap });
+                        });
                     }
 
                     if (context.extTextureFilterAnisotropic) {
@@ -149,19 +148,22 @@ class RasterTileSource extends Evented implements Source {
                 }
 
                 tile.state = 'loaded';
+                tile.img = img
 
                 cacheEntryPossiblyAdded(this.dispatcher);
 
                 callback(null);
+                this.fire(new Event('tile-load', {tile: tile}))
             }
         });
     }
 
     prepare() {
-        this.fire(new Event('repaint'))
+        this.fire(new Event('repaint'));
     }
 
     abortTile(tile: Tile, callback: Callback<void>) {
+        this.fire(new Event('tile-abort', {tile: tile}))
         if (tile.request) {
             tile.request.cancel();
             delete tile.request;
@@ -170,6 +172,7 @@ class RasterTileSource extends Evented implements Source {
     }
 
     unloadTile(tile: Tile, callback: Callback<void>) {
+        this.fire(new Event('tile-unload', {tile: tile}))
         if (tile.texture) this.map.painter.saveTileTexture(tile.texture);
         callback();
     }
